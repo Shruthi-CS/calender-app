@@ -55,12 +55,10 @@ calendar-app/
 ## 🧪 How to Use Locally
 
 # Clone the repo
-git clone https://https://github.com/Shruthi-CS/calender-app
+git clone https://github.com/Shruthi-CS/calender-app
 cd calendar-app
 
 # Open any HTML file in browser
-# Or run with Live Server (recommended)
-
 🌐 Deployment
 Deploy using GitHub Pages:
 Push all files to your GitHub repository.
