@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar App - Reminders</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Calendar App</h1>
+    <div class="icons">
+      <img src="calendar-icon.png" alt="Calendar" onclick="window.location.href='index.html'">
+      <img src="reminder-icon.png" alt="Reminders" onclick="window.location.href='reminders.html'">
+    </div>
+  </header>
+
+  <div class="reminder-page">
+    <h1>All Reminders</h1>
+    <div id="reminder-list" class="reminder-list"></div>
+  </div>
+
+  <script>
+    const reminders = JSON.parse(localStorage.getItem("calendar-events")) || [];
+    const container = document.getElementById("reminder-list");
+
+    if (reminders.length === 0) {
+      container.innerHTML = "<p>No reminders found.</p>";
+    } else {
+      const grouped = {};
+      reminders.forEach(ev => {
+        if (!grouped[ev.date]) grouped[ev.date] = [];
+        grouped[ev.date].push(ev);
+      });
+
+      for (const date in grouped) {
+        const section = document.createElement("div");
+        section.classList.add("reminder-date-section");
+
+        const heading = document.createElement("h2");
+        heading.textContent = `📅 ${date}`;
+        section.appendChild(heading);
+
+        grouped[date].forEach(ev => {
+          const item = document.createElement("div");
+          item.classList.add("reminder-item");
+          item.innerHTML = `<strong>${ev.time}</strong> – ${ev.title}`;
+          section.appendChild(item);
+        });
+
+        container.appendChild(section);
+      }
+    }
+  </script>
+</body>
+</html>
