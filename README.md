@@ -11,12 +11,19 @@ This project allows users to:
 
 calendar-app/
 ├── index.html # Main calendar interface
+
 ├── reminders.html # All reminders view
+
 ├── dashboard.html # App landing/dashboard page
+
 ├── style.css # Global styles
+
 ├── script.js # Calendar logic
+
 ├── calendar-icon.png # Icon used in navbar
+
 ├── reminder-icon.png # Icon used in navbar
+
 └── README.md # Project documentation
 
 
@@ -35,16 +42,6 @@ calendar-app/
 
 ---
 
-## 📸 Screenshots
-
-| Calendar View                     | Reminder View                       |
-|----------------------------------|-------------------------------------|
-| ![Calendar Screenshot](screenshots/calendar.png) | ![Reminder Screenshot](screenshots/reminders.png) |
-
-*(You can add actual screenshots to a `/screenshots` folder and update these links)*
-
----
-
 ## 🛠️ Tech Stack
 
 - HTML5
@@ -56,7 +53,6 @@ calendar-app/
 
 ## 🧪 How to Use Locally
 
-```bash
 # Clone the repo
 git clone https://github.com/your-username/calendar-app.git
 cd calendar-app
