@@ -10,6 +10,7 @@ This project allows users to:
 - Store reminders using browser `localStorage`.
 
 calendar-app/
+
 ├── index.html # Main calendar interface
 
 ├── reminders.html # All reminders view
@@ -54,7 +55,7 @@ calendar-app/
 ## 🧪 How to Use Locally
 
 # Clone the repo
-git clone https://github.com/your-username/calendar-app.git
+git clone https://https://github.com/Shruthi-CS/calender-app
 cd calendar-app
 
 # Open any HTML file in browser
